@@ -47,6 +47,28 @@ export const updateOrderStatus = (req, res) => {
   const sql = 'UPDATE orders SET status = ? WHERE id = ?';
   db.query(sql, [status, id], (err, result) => {
     if (err) return res.status(500).send(err);
+
+    if (result.affectedRows === 0) {
+      return res.status(404).json({ error: "Order not found" });
+    }
+
     res.json({ message: '✅ Order status updated successfully' });
   });
 };
+
+// delete order 
+export const deleteOrder = (req, res) => {
+  const { id } = req.params;
+  const sql = 'DELETE FROM orders WHERE id = ?';
+
+  db.query(sql, [id], (err, result) => {
+    if (err) return res.status(500).send(err);
+
+    if (result.affectedRows === 0) {
+      return res.status(404).json({ error: "Order not found" });
+    }
+
+    res.json({ message: '✅ Order deleted successfully' });
+  });
+};
+

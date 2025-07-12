@@ -1,0 +1,20 @@
+----------------------------------------
+----------------ORDER-------------------
+----------------------------------------
+
+GET all orders:
+GET http://localhost:8000/v1/api/orders
+
+Create order:
+POST http://localhost:8000/v1/api/orders
+(body: JSON with order details)
+
+Update status:
+PUT http://localhost:8000/v1/api/orders/3/status
+(body: { "status": "completed" })
+
+Delete order:
+DELETE http://localhost:8000/v1/api/orders/3
+
+
+
