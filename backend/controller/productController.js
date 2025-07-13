@@ -212,11 +212,12 @@ export const deleteProduct = (req, res) => {
     // Step 2: Delete photo files from server
     photos.forEach(photo => {
       const filePath = path.join('public', photo.url);
-      console.log("🧾 Trying to delete:", filePath);
+     
       if (fs.existsSync(filePath)) {
         fs.unlinkSync(filePath);
       }
     });
+
 
     // Step 3: Delete product from DB
     const deleteProductSql = 'DELETE FROM products WHERE id = ?';
