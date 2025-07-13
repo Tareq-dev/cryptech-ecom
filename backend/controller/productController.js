@@ -95,22 +95,11 @@ export const getSingleProduct = (req, res) => {
 // ধরছি multer দিয়ে photos ফাইলগুলো req.files এ আসবে
 
 export const createProduct = (req, res) => {
-  const { name, description, price, stock, content } = req.body;
+  const { name, description, price, stock, content, position, category } = req.body;
   let { specification } = req.body;
   const photos = req.files;
 
-  // Basic validation
-  if (!name) {
-    return res.status(400).json({ error: "Product name is required" });
-  }
-  if (!price || isNaN(price) || Number(price) <= 0) {
-    return res.status(400).json({ error: "Price is required" });
-  }
-  if (!stock || isNaN(stock) || !Number.isInteger(Number(stock)) || Number(stock) < 0) {
-    return res.status(400).json({ error: "Stock is required" });
-  }
-
-  // Parse specification JSON if it's a string
+  
   try {
     if (typeof specification === 'string') {
       specification = JSON.parse(specification);
@@ -119,33 +108,44 @@ export const createProduct = (req, res) => {
     return res.status(400).json({ error: "Invalid JSON format in specification" });
   }
 
-  // Insert product
-  const insertProductSql = `
-    INSERT INTO products (name, description, price, stock, content, specification)
-    VALUES (?, ?, ?, ?, ?, ?)
-  `;
-
-  db.query(insertProductSql, [name, description || '', price, stock, content || '', JSON.stringify(specification)], (err, result) => {
+  // প্রথমে সর্বোচ্চ position নিয়ে আসো
+  db.query('SELECT MAX(position) as maxPosition FROM products', (err, result) => {
     if (err) return res.status(500).json({ error: err.message });
 
-    const productId = result.insertId;
-
-    // If photos exist
-    if (photos && photos.length > 0) {
-      const photoValues = photos.map(file => [productId, '/uploadsProducts/' + file.filename]);
-      const insertPhotosSql = 'INSERT INTO product_photos (product_id, url) VALUES ?';
-
-      db.query(insertPhotosSql, [photoValues], (err2, result2) => {
-        if (err2) {
-          console.error("Photos insert error:", err2);
-          return res.status(500).json({ error: err2.message });
-        }
-
-        res.status(201).json({ message: '✅ Product and photos created successfully', productId });
-      });
-    } else {
-      res.status(201).json({ message: '✅ Product created successfully', productId });
+    const maxPosition = result[0].maxPosition || 0;
+    let newPosition = position;
+    if (!newPosition) {
+      newPosition = maxPosition + 1;  // auto increment
     }
+
+    // এরপর প্রোডাক্ট ইনসার্ট করো নতুন position সহ
+    const insertProductSql = `
+      INSERT INTO products (name, description, price, stock, content, specification, category, position)
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+    `;
+
+    db.query(insertProductSql, [name, description || '', price, stock, content || '', JSON.stringify(specification), category || '', newPosition], (err2, result2) => {
+      if (err2) return res.status(500).json({ error: err2.message });
+
+      const productId = result2.insertId;
+
+      // Photos insert (যেমন আগের মতো) ...
+      if (photos && photos.length > 0) {
+        const photoValues = photos.map(file => [productId, '/uploadsProducts/' + file.filename]);
+        const insertPhotosSql = 'INSERT INTO product_photos (product_id, url) VALUES ?';
+
+        db.query(insertPhotosSql, [photoValues], (err3) => {
+          if (err3) {
+            console.error("Photos insert error:", err3);
+            return res.status(500).json({ error: err3.message });
+          }
+
+          res.status(201).json({ message: '✅ Product and photos created successfully', productId });
+        });
+      } else {
+        res.status(201).json({ message: '✅ Product created successfully', productId });
+      }
+    });
   });
 };
 
@@ -212,7 +212,7 @@ export const deleteProduct = (req, res) => {
     // Step 2: Delete photo files from server
     photos.forEach(photo => {
       const filePath = path.join('public', photo.url);
-     
+
       if (fs.existsSync(filePath)) {
         fs.unlinkSync(filePath);
       }

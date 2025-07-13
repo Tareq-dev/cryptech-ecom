@@ -16,5 +16,14 @@ PUT http://localhost:8000/v1/api/orders/3/status
 Delete order:
 DELETE http://localhost:8000/v1/api/orders/3
 
+----------------------------------------
+----------------Products-------------------
+----------------------------------------
 
+Method	Endpoint	Description
+GET	/v1/api/product	সব প্রোডাক্ট লিস্ট আনা
+GET	/v1/api/product/:id	একক প্রোডাক্ট আনা
+POST	/v1/api/product	নতুন প্রোডাক্ট + ছবিসহ যোগ করা
+PUT	/v1/api/product/:id	প্রোডাক্ট আপডেট (ছবি ছাড়া)
+DELETE	/v1/api/product/:id	প্রোডাক্ট ও ছবিসহ ডিলিট করা
 
