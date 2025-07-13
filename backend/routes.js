@@ -16,7 +16,7 @@ router.delete('/order/:id', deleteOrder);
 router.get('/products', getAllProducts);
 router.get('/product/:id', getSingleProduct);
 router.post('/product', uploadMultiple, createProduct);
-router.put('/product/:id', updateProduct);
+router.put('/product/:id',uploadMultiple , updateProduct);
 router.delete('/product/:id', deleteProduct);
 
 export default router;
