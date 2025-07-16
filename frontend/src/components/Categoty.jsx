@@ -13,19 +13,19 @@ function Categoty() {
             <div>
                 <div className='px-14 flex justify-center'>
                     <div className='bg-gray-100 hover:bg-[#642771] transition delay-200 hover:text-white  rounded-2xl  m-4 px-8 py-6'>
-                        <GiWatch className='text-7xl   w-[100px] h-[100px] ' />
+                        <GiWatch className=' w-[70px] h-[70px] hover:text-white ' />
                         <p className='text-center text-2xl mt-2 font-semibold'>Watch</p>
                     </div>
                     <div className='bg-gray-100 hover:bg-[#642771] transition delay-200 hover:text-white  rounded-2xl  m-4 px-8 py-6'>
-                        <GiWatch className='text-7xl   w-[100px] h-[100px] ' />
+                        <GiWatch className='w-[70px] h-[70px] ' />
                         <p className='text-center text-2xl mt-2 font-semibold'>Watch</p>
                     </div>
                     <div className='bg-gray-100 hover:bg-[#642771] transition delay-200 hover:text-white  rounded-2xl  m-4 px-8 py-6'>
-                        <GiWatch className='text-7xl   w-[100px] h-[100px] ' />
+                        <GiWatch className='w-[70px] h-[70px] ' />
                         <p className='text-center text-2xl mt-2 font-semibold'>Watch</p>
                     </div>
                     <div className='bg-gray-100 hover:bg-[#642771] transition delay-200 hover:text-white  rounded-2xl  m-4 px-8 py-6'>
-                        <GiWatch className='text-7xl   w-[100px] h-[100px] ' />
+                        <GiWatch className='w-[70px] h-[70px] ' />
                         <p className='text-center text-2xl mt-2 font-semibold'>Watch</p>
                     </div>
                 </div>
