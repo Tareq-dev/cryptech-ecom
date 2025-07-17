@@ -11,19 +11,19 @@ import Slider from "react-slick";
 
 
 const products = [
-    { id: 1, name: "Smart Watch", price: "$99", image: w1 },
-    { id: 2, name: "Wireless Earbuds", price: "$49", image: w2 },
-    { id: 3, name: "Gaming Mouse", price: "$29", image: w3 },
-    { id: 4, name: "VR Headset", price: "$149", image: w4 },
-    { id: 5, name: "Smartphone", price: "$699", image: w5 },
-    { id: 6, name: "Keyboard", price: "$39", image: w4 },
-    { id: 7, name: "Smart Glass", price: "$129", image: w1 },
-    { id: 8, name: "Speaker", price: "$89", image: w2 },
-    { id: 8, name: "Speaker", price: "$89", image: w2 },
-    { id: 8, name: "Speaker", price: "$89", image: w2 },
-    { id: 8, name: "Speaker", price: "$89", image: w2 },
-    { id: 8, name: "Speaker", price: "$89", image: w2 },
-    { id: 8, name: "Speaker", price: "$89", image: w2 },
+  { id: 1, name: "Smart Watch", price: "$99", image: w1 },
+  { id: 2, name: "Wireless Earbuds", price: "$49", image: w2 },
+  { id: 3, name: "Gaming Mouse", price: "$29", image: w3 },
+  { id: 4, name: "VR Headset", price: "$149", image: w4 },
+  { id: 5, name: "Smartphone", price: "$699", image: w5 },
+  { id: 6, name: "Keyboard", price: "$39", image: w4 },
+  { id: 7, name: "Smart Glass", price: "$129", image: w1 },
+  { id: 8, name: "Speaker", price: "$89", image: w2 },
+  { id: 9, name: "Speaker", price: "$89", image: w4 },
+  { id: 10, name: "Speaker", price: "$89", image: w3 },
+  { id: 11, name: "Speaker", price: "$89", image: w1 },
+  { id: 12, name: "Speaker", price: "$89", image: w5 },
+  { id: 3, name: "Speaker", price: "$89", image: w2 },
 ];
 
 function SliderProducts() {
@@ -72,14 +72,14 @@ function SampleNextArrow(props) {
             <div className="bg-[#fceeff] rounded-2xl px-10">
                 {/* Product Slider */}
                 <Slider {...settings}
-                    className="py-8 my-8 "
+                    className="py-8 my-8 cursor-pointer "
 
                 >
 
                     {products.map((product) => (
                         <div
                             key={product.id}
-                            className="min-w-[180px] max-w-[200px] bg-white shadow border border-gray-100 rounded-xl  p-4 flex-shrink-0 transition-all duration-300"
+                            className="min-w-[180px] hover:shadow-md max-w-[200px] bg-white shadow border border-gray-100 rounded-2xl  p-4 flex-shrink-0 transition-all duration-300"
                         >
                             <div className="flex justify-center">
                                 <img
@@ -89,7 +89,7 @@ function SampleNextArrow(props) {
                                 />
                             </div>
                             <h3 className="text-md text-center font-medium">{product.name}</h3>
-                            <p className="text-gray-600 text-center my-2">{product.price}</p>
+                               <p className="text-gray-600 text-center font-semibold my-2 ">{product.price} <span className='line-through ml-2'>$100</span></p>
                             <div className="flex justify-between gap-2">
                                 <button className="bg-[#642771] px-2 text-white py-1 rounded text-xs hover:bg-[#642771]">
                                     Buy Now

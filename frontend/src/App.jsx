@@ -3,8 +3,10 @@ import Carousel from './components/Carousel'
 import Categoty from './components/Categoty'
 import Navbar from './components/Navbar'
 import SubMenus from './components/DropdownMenu'
-import SmartEss from './components/SmartEss'
 import SliderProducts from './components/SliderProducts'
+import NewArrivals from './components/NewArrivals'
+import ProductsBanner from './components/ProductsBanner'
+import FeatureProducts from './components/FeatureProducts'
 
 function App() {
 
@@ -14,8 +16,11 @@ function App() {
       <SubMenus />
       <Carousel />
       <Categoty />
-      {/* <SmartEss /> */}
       <SliderProducts />
+      <FeatureProducts />
+      <ProductsBanner />
+      <NewArrivals />
+
     </>
   )
 }
