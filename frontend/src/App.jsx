@@ -7,6 +7,7 @@ import SliderProducts from './components/SliderProducts'
 import NewArrivals from './components/NewArrivals'
 import ProductsBanner from './components/ProductsBanner'
 import FeatureProducts from './components/FeatureProducts'
+import ProductsBannerTwo from './components/ProductsBannerTwo'
 
 function App() {
 
@@ -20,7 +21,7 @@ function App() {
       <FeatureProducts />
       <ProductsBanner />
       <NewArrivals />
-
+      <ProductsBannerTwo />
     </>
   )
 }

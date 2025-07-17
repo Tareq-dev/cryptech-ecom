@@ -72,7 +72,7 @@ function SampleNextArrow(props) {
             <div className="bg-[#fceeff] rounded-2xl px-10">
                 {/* Product Slider */}
                 <Slider {...settings}
-                    className="py-8 my-8 cursor-pointer "
+                    className="py-8 mx-8 my-8 cursor-pointer "
 
                 >
 

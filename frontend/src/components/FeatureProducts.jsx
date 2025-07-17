@@ -24,7 +24,7 @@ const products = [
 
 function FeatureProducts() {
   return (
-    <div className="my-16">
+    <div className="my-18">
       <h1 className="text-3xl font-semibold mt-6 text-center">Feature Arrivals</h1>
       <div className="p-18">
 

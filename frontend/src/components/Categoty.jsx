@@ -2,9 +2,9 @@ import React from 'react'
 import { GiWatch } from "react-icons/gi";
 function Categoty() {
     return (
-        <div className='py-8'>
+        <div className='py-'>
             <div className='p-16'>
-                <h1 className='text-4xl font-semibold text-center'>FEATURED CATEGORIES
+                <h1 className='text-3xl font-semibold text-center'>FEATURED CATEGORIES
                 </h1>
                 <p className='text-xl text-center mt-4'>
                     Get your desired product from featured category
