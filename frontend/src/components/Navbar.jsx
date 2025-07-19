@@ -1,4 +1,6 @@
 import React from 'react'
+import { IoSearch } from "react-icons/io5";
+
 
 function Navbar() {
     return (
@@ -23,10 +25,23 @@ function Navbar() {
                     </ul>
                 </div>
                 <a className="btn btn-ghost text-xl">CrypTech</a>
+                 <form className="flex flex-col sm:flex-row items-center">
+              <input
+                type="email"
+                placeholder="Search here ..."
+                className="w-full sm:w-auto flex-1 px-3 py-1 rounded-l-md bg-white text-black focus:outline-none"
+              />
+              <button
+                type="submit"       
+                className="bg-white cursor-pointer text-black px-4 py-2   rounded-r-md hover:bg-[#642771] hover:text-white   hover:border-[#642771]"
+              >
+               <IoSearch />
+              </button>
+            </form>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
-                    <li><a>Item 1</a></li>
+                    <li><a>Item s</a></li>
                     <li>
                         <details>
                             <summary>Parent</summary>
