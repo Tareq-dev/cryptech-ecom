@@ -9,6 +9,8 @@ import ProductsBanner from './components/ProductsBanner'
 import FeatureProducts from './components/FeatureProducts'
 import ProductsBannerTwo from './components/ProductsBannerTwo'
 import Brand from './components/Brand'
+import Content from './components/Content'
+import Footer from './components/Footer'
 
 function App() {
 
@@ -24,6 +26,8 @@ function App() {
       <NewArrivals />
       <ProductsBannerTwo />
       <Brand />
+      <Content />
+      <Footer />
     </>
   )
 }
