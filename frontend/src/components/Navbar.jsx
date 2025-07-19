@@ -1,6 +1,7 @@
 import React from 'react'
 import { IoSearch } from "react-icons/io5";
-
+import logo from "../assets/logo.png"
+import { GrCart } from "react-icons/gr";
 
 function Navbar() {
     return (
@@ -24,38 +25,32 @@ function Navbar() {
                         <li><a>Item 3</a></li>
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl">CrypTech</a>
-                 <form className="flex flex-col sm:flex-row items-center">
-              <input
-                type="email"
-                placeholder="Search here ..."
-                className="w-full sm:w-auto flex-1 px-3 py-1 rounded-l-md bg-white text-black focus:outline-none"
-              />
-              <button
-                type="submit"       
-                className="bg-white cursor-pointer text-black px-4 py-2   rounded-r-md hover:bg-[#642771] hover:text-white   hover:border-[#642771]"
-              >
-               <IoSearch />
-              </button>
-            </form>
+                <a className=" mr-8 text-xl"> 
+                    <img className='w-40' src={logo} alt="" srcset="" />
+                </a>
+                <form className="flex flex-col sm:flex-row w-[400px] items-center ml-4">
+                    <input
+                        type="email"
+                        placeholder="Search here ..."
+                        className="w-full sm:w-auto flex-1 px-3 py-1 rounded-l-md  bg-white text-black focus:outline-none"
+                    />
+                    <button
+                        type="submit"
+                        className="bg-white cursor-pointer text-black px-4 py-2 transition hover:delay-300  rounded-r-md hover:bg-[#642771] hover:text-white   hover:border-[#642771]"
+                    >
+                        <IoSearch />
+                    </button>
+                </form>
             </div>
-            <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1">
-                    <li><a>Item s</a></li>
-                    <li>
-                        <details>
-                            <summary>Parent</summary>
-                            <ul className="p-2 bg-[#642771]">
-                                <li><a>Submenu 1</a></li>
-                                <li><a>Submenu 2</a></li>
-                            </ul>
-                        </details>
-                    </li>
-                    <li><a>Item 3</a></li>
-                </ul>
-            </div>
+
             <div className="navbar-end">
-                <a className="">Contact Us</a>
+                <ul className="menu menu-horizontal text-[16px] px-6">
+                    <li><a>New Offer</a></li>
+                    <li><a>Happy Client</a></li>
+                    <li><a><GrCart className='text-md' />Cart</a></li>
+                    <li><a className="">Contact Us</a></li>
+                </ul>
+
             </div>
         </div>
     )

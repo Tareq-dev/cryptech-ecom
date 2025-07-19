@@ -35,7 +35,7 @@ const DropdownMenu = () => {
     <div className="w-full font-sans">
       
       {/* Horizontal Menu */}
-      <div className="flex justify-center space-x-4 bg-white py-1">
+      <div className="flex justify-center space-x-4 shadow mb-6 bg-white py-1">
         {Object.entries(categories).map(([main, subs]) => (
           <div
             key={main}
