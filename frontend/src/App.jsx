@@ -8,6 +8,7 @@ import NewArrivals from './components/NewArrivals'
 import ProductsBanner from './components/ProductsBanner'
 import FeatureProducts from './components/FeatureProducts'
 import ProductsBannerTwo from './components/ProductsBannerTwo'
+import Brand from './components/Brand'
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
       <ProductsBanner />
       <NewArrivals />
       <ProductsBannerTwo />
+      <Brand />
     </>
   )
 }
