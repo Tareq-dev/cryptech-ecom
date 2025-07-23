@@ -2,6 +2,7 @@ import React from 'react'
 import { IoSearch } from "react-icons/io5";
 import logo from "../assets/logo.png"
 import { GrCart } from "react-icons/gr";
+import { Link } from 'react-router';
 
 function Navbar() {
     return (
@@ -25,9 +26,9 @@ function Navbar() {
                         <li><a>Item 3</a></li>
                     </ul>
                 </div>
-                <a className=" mr-8 text-xl"> 
+                <Link to="/" className=" mr-8 text-xl"> 
                     <img className='w-40' src={logo} alt="" srcset="" />
-                </a>
+                </Link>
                 <form className="flex flex-col sm:flex-row w-[400px] items-center ml-4">
                     <input
                         type="email"
@@ -48,7 +49,7 @@ function Navbar() {
                     <li><a>New Offer</a></li>
                     <li><a>Happy Client</a></li>
                     <li><a><GrCart className='text-md' />Cart</a></li>
-                    <li><a className="">Contact Us</a></li>
+                    <li><Link to='/contact' className="">Contact Us</Link></li>
                 </ul>
 
             </div>
