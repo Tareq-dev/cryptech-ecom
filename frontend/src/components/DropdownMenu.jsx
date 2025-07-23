@@ -32,7 +32,7 @@ const DropdownMenu = () => {
   };
 
   return (
-    <div className="w-full font-sans">
+    <div className="w-full font-sans ">
       
       {/* Horizontal Menu */}
       <div className="flex justify-center space-x-4 shadow mb-6 bg-white py-1">

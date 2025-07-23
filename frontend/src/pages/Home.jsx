@@ -9,10 +9,12 @@ import NewArrivals from '../components/NewArrivals'
 import ProductsBannerTwo from '../components/ProductsBannerTwo'
 import Brand from '../components/Brand'
 import Content from '../components/Content'
+import DropdownMenu from '../components/DropdownMenu'
 
 function Home() {
     return (
         <div>
+            <DropdownMenu />
             <Carousel />
             <Categoty />
             <SliderProducts />
