@@ -2,7 +2,7 @@ import React from 'react'
 
 function HappyClients() {
   return (
-    <div>HappyClients</div>
+    <div className='h-80'>HappyClients</div>
   )
 }
 

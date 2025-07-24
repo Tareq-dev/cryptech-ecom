@@ -46,9 +46,9 @@ function Navbar() {
 
             <div className="navbar-end">
                 <ul className="menu menu-horizontal text-[16px] px-6">
-                    <li><a>New Offer</a></li>
-                    <li><a>Happy Client</a></li>
-                    <li><a><GrCart className='text-md' />Cart</a></li>
+                    <li><Link to='/new-offer'>New Offer</Link></li>
+                    <li><Link to='happy-clients'>Happy Client</Link></li>
+                    <li><Link to='/cart'><GrCart className='text-md' />Cart</Link></li>
                     <li><Link to='/contact' className="">Contact Us</Link></li>
                 </ul>
 

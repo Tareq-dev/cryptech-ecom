@@ -2,7 +2,7 @@ import React from 'react'
 
 function NewOffer() {
   return (
-    <div>NewOffer</div>
+    <div className='h-80'>NewOffer</div>
   )
 }
 
