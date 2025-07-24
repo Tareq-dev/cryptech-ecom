@@ -27,7 +27,7 @@ function Navbar() {
                     </ul>
                 </div>
                 <Link to="/" className=" mr-8 text-xl"> 
-                    <img className='w-40' src={logo} alt="" srcset="" />
+                    <img className='w-40' src={logo} alt="" srcSet="" />
                 </Link>
                 <form className="flex flex-col sm:flex-row w-[400px] items-center ml-4">
                     <input
