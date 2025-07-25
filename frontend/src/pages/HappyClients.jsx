@@ -1,7 +1,17 @@
 import React from 'react';
+import picchi from '../assets/picci.jpg'
 
+const clientImages = [
+  picchi,
+  picchi,
+  picchi,
+  picchi,
+  picchi,
+  picchi,
+  picchi,
+  picchi
+];
 
-const clientImages = ['https://www.facebook.com/photo.php?fbid=956843926441468&set=pb.100063476081798.-2207520000&type=3', 'https://www.facebook.com/photo.php?fbid=956843926441468&set=pb.100063476081798.-2207520000&type=3', 'https://www.facebook.com/photo.php?fbid=956843926441468&set=pb.100063476081798.-2207520000&type=3', 'https://www.facebook.com/photo.php?fbid=956843926441468&set=pb.100063476081798.-2207520000&type=3', 'https://www.facebook.com/photo.php?fbid=956843926441468&set=pb.100063476081798.-2207520000&type=3', 'https://www.facebook.com/photo.php?fbid=956843926441468&set=pb.100063476081798.-2207520000&type=3', 'https://www.facebook.com/photo.php?fbid=956843926441468&set=pb.100063476081798.-2207520000&type=3', 'https://www.facebook.com/photo.php?fbid=956843926441468&set=pb.100063476081798.-2207520000&type=3'];
 console.log(clientImages)
 function HappyClients() {
   return (
