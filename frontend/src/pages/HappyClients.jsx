@@ -1,15 +1,8 @@
 import React from 'react';
 
-// Dummy client photos
-const client1 = 'https://www.facebook.com/photo.php?fbid=956843926441468&set=pb.100063476081798.-2207520000&type=3';
-const client2 ='https://www.facebook.com/photo.php?fbid=956843926441468&set=pb.100063476081798.-2207520000&type=3';
-const client3 ='https://www.facebook.com/photo.php?fbid=956843926441468&set=pb.100063476081798.-2207520000&type=3';
-const client4 ='https://www.facebook.com/photo.php?fbid=956843926441468&set=pb.100063476081798.-2207520000&type=3';
-const client5 ='https://www.facebook.com/photo.php?fbid=956843926441468&set=pb.100063476081798.-2207520000&type=3';
-const client6 ='https://www.facebook.com/photo.php?fbid=956843926441468&set=pb.100063476081798.-2207520000&type=3';
 
-const clientImages = [client1, client2, client3, client4, client5, client6];
-
+const clientImages = ['https://www.facebook.com/photo.php?fbid=956843926441468&set=pb.100063476081798.-2207520000&type=3', 'https://www.facebook.com/photo.php?fbid=956843926441468&set=pb.100063476081798.-2207520000&type=3', 'https://www.facebook.com/photo.php?fbid=956843926441468&set=pb.100063476081798.-2207520000&type=3', 'https://www.facebook.com/photo.php?fbid=956843926441468&set=pb.100063476081798.-2207520000&type=3', 'https://www.facebook.com/photo.php?fbid=956843926441468&set=pb.100063476081798.-2207520000&type=3', 'https://www.facebook.com/photo.php?fbid=956843926441468&set=pb.100063476081798.-2207520000&type=3', 'https://www.facebook.com/photo.php?fbid=956843926441468&set=pb.100063476081798.-2207520000&type=3', 'https://www.facebook.com/photo.php?fbid=956843926441468&set=pb.100063476081798.-2207520000&type=3'];
+console.log(clientImages)
 function HappyClients() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-10">
